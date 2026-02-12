@@ -1,0 +1,56 @@
+{
+  "id": 12,
+  "title": "Kurumsal Web İçerik ve Etkinlik Yönetim Platformu",
+  "subtitle": "Üniversiteler İçin Çok Dilli Kongre ve Kurumsal CMS Sistemi",
+  "isFeatured": true,
+  "description": "Bu proje, üniversitelerin Bilgi İşlem Daireleri ve fakülteleri tarafından düzenlenen kongre, sempozyum ve akademik etkinlikler için geliştirilmiş, ASP.NET Core MVC tabanlı kurumsal bir web içerik ve etkinlik yönetim platformudur. Yönetim paneli sayesinde teknik bilgisi olmayan idari personel; etkinlik bilgilerini, tarihleri, kurulları, ücretleri ve sayfaları kolaylıkla yönetebilmektedir.\n\nSistem; çok dilli altyapısı, rol bazlı yetkilendirme yapısı ve kurumsal güvenlik standartları göz önünde bulundurularak geliştirilmiştir.",
+  "longDescription": "Kurumsal Web İçerik ve Etkinlik Yönetim Platformu, üniversitelerde düzenlenen akademik kongre ve etkinlikler için dinamik web siteleri üretmeyi amaçlayan, CMS mantığında çalışan kapsamlı bir ASP.NET Core MVC uygulamasıdır.\n\nYönetim paneli üzerinden; ana sayfa içerikleri, başlıklar, alt sayfalar, kurul üyeleri, tarihler, ücretlendirme bilgileri, konaklama detayları, kurallar, iletişim bilgileri ve ek sayfalar merkezi olarak yönetilebilmektedir.\n\nSistem; İngilizce, Türkçe ve Arapça dil desteği sunmakta olup, Query String tabanlı dil seçimi ile dinamik olarak içeriklerin çok dilli gösterimini sağlamaktadır. ASP.NET Identity altyapısı kullanılarak Root ve Admin rollerine sahip kullanıcılar için güvenli ve kontrollü bir yönetim ortamı oluşturulmuştur.",
+  "category": "Kurumsal Web Sistemleri & Akademik Çözümler",
+  "tags": [
+    "ASP.NET Core MVC",
+    "Kurumsal CMS",
+    "Üniversite Sistemleri",
+    "Kongre Yönetimi",
+    "Çok Dilli Web",
+    "Role Based Authorization",
+    "Entity Framework Core",
+    "SQL Server"
+  ],
+  "image": "/assets/images/Projects/KurumsalCMS/ana_sayfa.png",
+  "techLogos": [
+    "dotnet",
+    "csharp",
+    "entityframework",
+    "sqlserver",
+    "mvc",
+    "bootstrap"
+  ],
+  "date": "2025-05",
+  "duration": "2 ay",
+  "teamSize": 1,
+  "role": "Full Stack Developer",
+  "demoLink": null,
+  "githubLink": null,
+  "technologies": [
+    {
+      "name": "ASP.NET Core MVC",
+      "description": "Kurumsal web uygulamaları için güvenli, sürdürülebilir ve katmanlı mimari"
+    },
+    {
+      "name": "Entity Framework Core & SQL Server",
+      "description": "Akademik etkinlik verileri için güçlü ve tutarlı veri yönetimi"
+    },
+    {
+      "name": "Çok Dilli Altyapı (Localization)",
+      "description": "Türkçe, İngilizce ve Arapça dil desteği ile uluslararası erişim"
+    },
+    {
+      "name": "ASP.NET Identity",
+      "description": "Root ve Admin rollerine sahip kullanıcılar için rol bazlı yetkilendirme sistemi"
+    },
+    {
+      "name": "Modüler CMS Yapısı",
+      "description": "Sayfalar, alt sayfalar, kurullar, ücretler ve içeriklerin panel üzerinden dinamik yönetimi"
+    }
+  ]
+}

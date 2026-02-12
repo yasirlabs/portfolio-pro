@@ -1,0 +1,124 @@
+{
+  "title": "Sertifikalar ve Başarılar",
+  "subtitle": "Profesyonel sertifikalarım ve sürekli öğrenme yolculuğum",
+  "certificatesCount": "Sertifika",
+  "viewCertificate": "Sertifikayı Görüntüle",
+  "of": "/",
+  "categories": {
+    "ai": "Yapay Zeka",
+    "dataScience": "Veri Bilimi",
+    "cybersecurity": "Siber Güvenlik",
+    "php": "PHP",
+    "cloudComputing": "Bulut Bilişim",
+    "programming": "Programlama",
+    "devops": "DevOps",
+    "softSkills": "Kişisel Gelişim",
+    "network": "Ağ Teknolojileri",
+    "effectiveCommunication": "Etkili İletişim",
+    "trainingTrainers": "Eğitici Eğitimi"
+  },
+  "certificates": [
+    {
+      "title": "Diksiyon, Spikerlik ve Sunuculuk",
+      "issuer": "T.C. MİLLÎ EĞİTİM BAKANLIĞI Hayat Boyu Öğrenme Genel Müdürlüğü",
+      "date": "2026",
+      "category": "effectiveCommunication"
+    },
+    {
+      "title": "Usta Öğretici Oryantasyon Kurs Programı",
+      "issuer": "T.C. MİLLÎ EĞİTİM BAKANLIĞI Hayat Boyu Öğrenme Genel Müdürlüğü",
+      "date": "2025",
+      "category": "trainingTrainers"
+    },
+    {
+      "title": "Hatay'daki Gençleri Yapay Zeka Eğitimiyle Güçlendirme Programı",
+      "issuer": "Kodluyoruz",
+      "date": "2024",
+      "category": "ai"
+    },
+    {
+      "title": "Veri Bilimi ve Yapay Zekaya Giriş101",
+      "issuer": "Turkcell",
+      "date": "2024",
+      "category": "dataScience"
+    },
+    {
+      "title": "IBM ile Kodluyoruz: CyberStart",
+      "issuer": "Kodluyoruz",
+      "date": "2024",
+      "category": "cybersecurity"
+    },
+    {
+      "title": "Başlangıç Seviye PHP ile Backend Web Development Patikası",
+      "issuer": "Patika",
+      "date": "2024",
+      "category": "php"
+    },
+    {
+      "title": "Siber Güvenlik Temelleri",
+      "issuer": "IBM SkillsBuild",
+      "date": "2024",
+      "category": "cloudComputing"
+    },
+    {
+      "title": "Dart Programlama Dili",
+      "issuer": "BTK Akademi",
+      "date": "2024",
+      "category": "programming"
+    },
+    {
+      "title": "Gelişen Teknolojileri Keşfet",
+      "issuer": "IBM",
+      "date": "2024",
+      "category": "devops"
+    },
+    {
+      "title": "Mesleki Yeterlilik",
+      "issuer": "Kodluyoruz",
+      "date": "2024",
+      "category": "devops"
+    },
+    {
+      "title": "Güvenlik Duvarına Giriş",
+      "issuer": "BTK Akademi",
+      "date": "2024",
+      "category": "cybersecurity"
+    },
+    {
+      "title": "Dijital Dünyada Çalışmak",
+      "issuer": "IBM SkillsBuild",
+      "date": "2024",
+      "category": "softSkills"
+    },
+    {
+      "title": "IBM ile Siber Güvenlik",
+      "issuer": "IBM",
+      "date": "2024",
+      "category": "cybersecurity"
+    },
+    {
+      "title": "Profesyonel Beceriler",
+      "issuer": "IBM SkillsBuild",
+      "date": "2024",
+      "category": "softSkills"
+    },
+    {
+      "title": "Temel Ağ Teknolojileri",
+      "issuer": "BTK Akademi",
+      "date": "2024",
+      "category": "network"
+    },
+    {
+      "title": "Dijital Dünyada Çalışmak",
+      "issuer": "IBM SkillsBuild",
+      "date": "2024",
+      "category": "softSkills"
+    },
+    {
+      "title": "Siber Güvenlik",
+      "issuer": "AIBÜ",
+      "date": "2024",
+      "category": "cybersecurity"
+    }
+  ]
+}
