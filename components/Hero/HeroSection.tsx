@@ -21,7 +21,6 @@ const iconMap: Record<string, any> = {
   Github,
 };
 import "./hero.css";
-import { stat } from "fs";
 
 export default function Hero() {
   const t = useTranslations("home.hero");
