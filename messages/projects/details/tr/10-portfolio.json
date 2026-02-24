@@ -27,7 +27,7 @@
     "teamSize": 1,
     "role": "Full Stack Developer",
     "demoLink": "https://yasiralrawi.netlify.app/tr",
-    "githubLink": null,
+    "githubLink": "https://github.com/yasir237/modern-portfolio-tr",
     "technologies": [
         {
             "name": "Next.js (App Router)",
@@ -227,6 +227,12 @@
             "type": 0,
             "heading": "Sistem Avantajları",
             "content": "Yeni bir proje eklemek için yalnızca yeni bir JSON dosyası oluşturmak yeterlidir. Kod tarafında herhangi bir değişiklik yapılmaz.\n\nHer dil için ayrı içerik dosyası bulunur. Dil değiştirildiğinde sistem otomatik olarak ilgili dosyayı yükler.\n\nBu mimari, portfolyoyu sınırsız genişletilebilir, teknik bilgi gerektirmeden yönetilebilir ve ürünleştirilebilir hale getirir."
-        }
+        },
+        {
+    "type": 0,
+    "heading": "GitHub Üzerinden İnceleyin",
+    "subheading": "Kurulum Rehberi ve Dokümantasyon",
+    "content": "Projenin kaynak koduna, kurulum adımlarına ve detaylı dokümantasyonuna GitHub üzerinden erişebilirsiniz.\n\nRepository: https://github.com/yasir237/modern-portfolio-tr"
+}
     ]
 }

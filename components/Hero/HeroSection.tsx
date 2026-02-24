@@ -41,7 +41,7 @@ export default function Hero() {
           animateValue(setAwards, 0, 24, 2000);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (statsRef.current) {
@@ -56,7 +56,7 @@ export default function Hero() {
     start: number,
     end: number,
     duration: number,
-    isDecimal: boolean = false
+    isDecimal: boolean = false,
   ): void => {
     const startTime = performance.now();
     const animate = (currentTime: number): void => {
@@ -295,7 +295,11 @@ export default function Hero() {
 
               {/* 4. CTA Buttons - Mobile */}
               <div className="flex flex-wrap gap-3 animate-slide-in-left-delay-6">
-                <button className="group relative px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-text text-sm font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(135,80,247,0.6)]">
+                <a
+                  href="/assets/docs/cv.pdf"
+                  download="CV.pdf"
+                  className="group relative px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-text text-sm font-bold rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(135,80,247,0.6)] inline-flex items-center"
+                >
                   <span className="relative z-10 flex items-center gap-2">
                     {t("downloadCV")}
                     <Download
@@ -304,9 +308,12 @@ export default function Hero() {
                     />
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary/80 group-hover:scale-110 transition-transform duration-500" />
-                </button>
+                </a>
 
-                <button className="group relative px-5 sm:px-6 py-2.5 sm:py-3 border-2 border-primary text-primary text-sm font-bold rounded-full overflow-hidden transition-all duration-500 hover:text-text hover:scale-105">
+                <a
+                  href="/projects"
+                  className="group relative px-5 sm:px-6 py-2.5 sm:py-3 border-2 border-primary text-primary text-sm font-bold rounded-full overflow-hidden transition-all duration-500 hover:text-text hover:scale-105 inline-flex items-center"
+                >
                   <span className="relative z-10 flex items-center gap-2">
                     {t("viewWork")}
                     <ArrowRight
@@ -315,7 +322,7 @@ export default function Hero() {
                     />
                   </span>
                   <div className="absolute inset-0 bg-primary translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
-                </button>
+                </a>
               </div>
 
               {/* 5. Social Media - Mobile */}
