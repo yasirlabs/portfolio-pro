@@ -32,6 +32,16 @@
     "role": "Full Stack Developer",
     "demoLink": "https://centilmen.vercel.app/",
     "githubLink": null,
+    "buy": {
+        "price": "199$",
+        "currency": "USD",
+        "features": [
+            "Lifetime updates are included",
+            "Valid for a single project",
+            "Source code is included"
+        ],
+        "buylink": "https://wa.me/905312649016?text=Merhaba%2C%20%22Centilmen%20-%20Kuaf%C3%B6r%20Randevu%20Sistemi%22%20projesi%20hakk%C4%B1nda%20bilgi%20verebilir%20misiniz%3F"
+    },
     "technologies": [
         {
             "name": "React & Tailwind CSS",

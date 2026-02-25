@@ -7,6 +7,7 @@ import { localeMap } from "@/data/systemLanguages";
 import ImageCarousel from "./ImageCarousel";
 import CodeBlock from "./CodeBlock";
 import { useTranslations } from "next-intl";
+import { ProjectDataService } from "../../lib/projectLoader";
 
 // SVG Icons
 const FALLBACK_TECH_ICON =
@@ -173,7 +174,7 @@ const ProjectDetailClient: React.FC<ProjectDetailClientProps> = ({
   const t = useTranslations();
   const handleImageError = (
     logoUrl: string,
-    e: React.SyntheticEvent<HTMLImageElement>
+    e: React.SyntheticEvent<HTMLImageElement>,
   ) => {
     if (!imageErrors.has(logoUrl)) {
       setImageErrors((prev) => new Set(prev).add(logoUrl));
@@ -219,7 +220,7 @@ const ProjectDetailClient: React.FC<ProjectDetailClientProps> = ({
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 mt-5">
           <Link
             href={`/${locale}/projects`}
             className="inline-flex items-center gap-2 text-text-muted hover:text-primary transition-colors mb-8 group"
@@ -255,7 +256,9 @@ const ProjectDetailClient: React.FC<ProjectDetailClientProps> = ({
                       <div className="bg-primary/10 p-2 rounded-lg">
                         <CalendarIcon className="w-5 h-5 text-primary" />
                       </div>
-                      <span className="text-text-muted text-sm">{t('date')}</span>
+                      <span className="text-text-muted text-sm">
+                        {t("date")}
+                      </span>
                     </div>
                     <p className="text-text font-semibold">
                       {formatDate(project.date || (project as any).meta?.date)}
@@ -269,7 +272,9 @@ const ProjectDetailClient: React.FC<ProjectDetailClientProps> = ({
                       <div className="bg-primary/10 p-2 rounded-lg">
                         <ClockIcon className="w-5 h-5 text-primary" />
                       </div>
-                      <span className="text-text-muted text-sm">{t('duration')}</span>
+                      <span className="text-text-muted text-sm">
+                        {t("duration")}
+                      </span>
                     </div>
                     <p className="text-text font-semibold">
                       {project.duration || (project as any).meta?.duration}
@@ -283,7 +288,9 @@ const ProjectDetailClient: React.FC<ProjectDetailClientProps> = ({
                       <div className="bg-primary/10 p-2 rounded-lg">
                         <UserIcon className="w-5 h-5 text-primary" />
                       </div>
-                      <span className="text-text-muted text-sm">{t('client')}</span>
+                      <span className="text-text-muted text-sm">
+                        {t("client")}
+                      </span>
                     </div>
                     <p className="text-text font-semibold">
                       {project.client || (project as any).meta?.client}
@@ -297,7 +304,9 @@ const ProjectDetailClient: React.FC<ProjectDetailClientProps> = ({
                       <div className="bg-primary/10 p-2 rounded-lg">
                         <UsersIcon className="w-5 h-5 text-primary" />
                       </div>
-                      <span className="text-text-muted text-sm">{t('teamSize')}</span>
+                      <span className="text-text-muted text-sm">
+                        {t("teamSize")}
+                      </span>
                     </div>
                     <p className="text-text font-semibold">
                       {project.teamSize || (project as any).meta?.teamSize}
@@ -600,10 +609,103 @@ const ProjectDetailClient: React.FC<ProjectDetailClientProps> = ({
 
           {/* Sidebar */}
           <div className="space-y-8">
+            {/* ── Satın Alma Kartı ── Sidebar'da technologies'in altına ekle ── */}
+            {project.buy && (
+              <div className="relative rounded-2xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/10 via-dark-secondary/40 to-dark-secondary/20 backdrop-blur-sm shadow-xl shadow-primary/10">
+              {/* Arka plan parıltı efekti */}
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="relative p-6 space-y-5">
+                {/* Başlık */}
+                <div className="flex items-center gap-2">
+                  <div className="bg-primary/15 p-2 rounded-lg">
+                    <svg
+                      className="w-5 h-5 text-primary"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <circle cx="8" cy="21" r="1" />
+                      <circle cx="19" cy="21" r="1" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-text">{t("buy")}</h3>
+                </div>
+
+                {/* Fiyat */}
+                <div className="flex items-end gap-1">
+                  <span className="text-5xl font-extrabold text-text leading-none">
+                    {project.buy.price}
+                  </span>
+                  <span className="text-text-muted text-sm mb-1">{project.buy.currency}</span>
+                </div>
+
+                {/* Özellikler */}
+                <div className="space-y-2">
+                  {project.buy.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2.5">
+                      <div className="flex-shrink-0 w-4 h-4 rounded-full bg-primary/15 flex items-center justify-center">
+                        <svg
+                          className="w-2.5 h-2.5 text-primary"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <p className="text-xs text-text-muted leading-relaxed">
+                        {feature}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Satın Al butonu */}
+                <a
+                  href={project.buy.buylink}
+                  target="_blank"
+                  className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 rounded-xl transition-all hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <circle cx="8" cy="21" r="1" />
+                    <circle cx="19" cy="21" r="1" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                    />
+                  </svg>
+                  {t("buynow")}
+                </a>
+              </div>
+            </div>
+            )}
+
             {/* Technologies Details */}
             {project.technologies && project.technologies.length > 0 && (
               <div className="bg-dark-secondary/20 rounded-2xl p-6 border border-border-subtle sticky top-24">
-                <h3 className="text-xl font-bold mb-4">{t('technologies')}</h3>
+                <h3 className="text-xl font-bold mb-4">{t("technologies")}</h3>
                 <div className="space-y-4">
                   {project.technologies.map((tech: any, idx: number) => (
                     <div
@@ -627,10 +729,8 @@ const ProjectDetailClient: React.FC<ProjectDetailClientProps> = ({
 
       <style jsx>{`
         .bg-grid-pattern {
-          background-image: linear-gradient(
-              rgba(255, 255, 255, 0.05) 1px,
-              transparent 1px
-            ),
+          background-image:
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
             linear-gradient(
               90deg,
               rgba(255, 255, 255, 0.05) 1px,

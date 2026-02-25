@@ -31,6 +31,16 @@
   "role": "Full Stack Developer & AI Engineer",
   "demoLink": "https://nobadwords.vercel.app",
   "githubLink": null,
+  "buy": {
+    "price": "59$",
+    "currency": "USD",
+    "features": [
+      "Lifetime updates are included",
+      "Valid for a single project",
+      "Source code is included"
+    ],
+    "buylink": "https://wa.me/905312649016?text=Hello%2C%20could%20you%20please%20provide%20more%20information%20about%20the%20%22NoBadWords%20-%20AI-Powered%20Content%20Moderation%20Platform%22%20project%3F"
+  },
   "technologies": [
     {
       "name": "Django & Python",

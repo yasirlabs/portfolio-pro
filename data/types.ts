@@ -69,15 +69,15 @@ export interface ContentBlock {
   heading?: string;
   subheading?: string;
   content?: string;
-  
+
   // Single Image (type 1)
   imageUrl?: string;
   caption?: string;
-  
+
   // Video (type 2)
   videoUrl?: string;
   posterUrl?: string;
-  
+
   // Image Gallery (type 3)
   images?: Array<{
     url: string;
@@ -86,7 +86,7 @@ export interface ContentBlock {
   }>;
   autoPlay?: boolean;
   autoPlayInterval?: number;
-  
+
   // Code Block (type 4) - YENİ!
   codeBlocks?: Array<{
     language: string;
@@ -108,11 +108,18 @@ export interface ProjectTestimonial {
   position: string;
 }
 
+export interface ProjectPriceBuy {
+  price: string;
+  currency: string;
+  features: string[];
+  buylink: string;
+}
+
 // ✅ DÜZELTME: Meta objesi kaldırıldı, alanlar direkt ProjectDetail'e taşındı
 export interface ProjectDetail {
   id: number;
   title: string;
-  subtitle?: string;              // ✅ Eklendi
+  subtitle?: string; // ✅ Eklendi
   description: string;
   category: string;
   tags: string[];
@@ -120,14 +127,15 @@ export interface ProjectDetail {
   techLogos: string[];
   demoLink?: string;
   githubLink?: string;
-  
+  buy?: ProjectPriceBuy;
+
   // Meta alanları direkt burada
-  date?: string;                  // ✅ Eklendi
-  duration?: string;              // ✅ Eklendi
-  client?: string;                // ✅ Eklendi
-  teamSize?: string | number;     // ✅ Eklendi (string veya number olabilir)
-  role?: string;                  // ✅ Eklendi
-  
+  date?: string; // ✅ Eklendi
+  duration?: string; // ✅ Eklendi
+  client?: string; // ✅ Eklendi
+  teamSize?: string | number; // ✅ Eklendi (string veya number olabilir)
+  role?: string; // ✅ Eklendi
+
   technologies: Technology[];
   contentBlocks: ContentBlock[];
   challenges?: string[];
@@ -167,4 +175,3 @@ export interface ProjectsIndex {
   };
   items: ProjectListItem[];
 }
-

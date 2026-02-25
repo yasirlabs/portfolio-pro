@@ -17,18 +17,23 @@
     "SQL Server"
   ],
   "image": "https://res.cloudinary.com/dvx6nsrd9/image/upload/v1768735937/dafsem-ozet-poster_wgqrz3.png",
-  "techLogos": [
-    "dotnet",
-    "csharp",
-    "sqlserver",
-    "bootstrap"
-  ],
+  "techLogos": ["dotnet", "csharp", "sqlserver", "bootstrap"],
   "date": "2025-05",
   "duration": "2 ay",
   "teamSize": 1,
   "role": "Full Stack Developer",
   "demoLink": "https://familycongress.kku.edu.tr/index-tr.html",
   "githubLink": null,
+  "buy": {
+    "price": "64$",
+    "currency": "USD",
+    "features": [
+      "Ömür boyu güncelleme dahildir",
+      "Tek proje için geçerlidir",
+      "Kaynak kod dahildir"
+    ],
+    "buylink": "https://yasiralrawi.gumroad.com/l/elpyz"
+  },
   "technologies": [
     {
       "name": "ASP.NET Core MVC",

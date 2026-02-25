@@ -28,6 +28,16 @@
     "role": "Full Stack Developer",
     "demoLink": "https://yasiralrawi.netlify.app/en",
     "githubLink": "https://github.com/yasir237/modern-portfolio-en",
+    "buy": {
+        "price": "16$",
+        "currency": "USD",
+        "features": [
+            "Lifetime updates are included",
+            "Valid for a single project",
+            "Source code is included"
+        ],
+        "buylink": "https://yasiralrawi.gumroad.com/l/psuwo"
+    },
     "technologies": [
         {
             "name": "Next.js (App Router)",

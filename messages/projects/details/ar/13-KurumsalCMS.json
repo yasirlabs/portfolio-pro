@@ -29,6 +29,16 @@
   "role": "Full Stack Developer",
   "demoLink": "https://familycongress.kku.edu.tr/index-tr.html",
   "githubLink": null,
+   "buy": {
+        "price": "64$",
+        "currency": "USD",
+        "features": [
+      "تحكم كامل بمدى الحياة",
+      "اتاحة جميع المميزات",
+      "تسليم الكود المصدري"
+    ],
+        "buylink": "https://yasiralrawi.gumroad.com/l/elpyz"
+    },
   "technologies": [
     {
       "name": "ASP.NET Core MVC",

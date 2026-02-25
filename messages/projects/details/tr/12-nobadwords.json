@@ -31,6 +31,16 @@
   "role": "Full Stack Developer & Yapay Zekâ Mühendisi",
   "demoLink": "https://nobadwords.vercel.app",
   "githubLink": null,
+  "buy": {
+    "price": "59$",
+    "currency": "USD",
+    "features": [
+      "Ömür boyu güncelleme dahildir",
+      "Tek proje için geçerlidir",
+      "Kaynak kod dahildir"
+    ],
+    "buylink": "https://wa.me/905312649016?text=Merhaba%2C%20%22NoBadWords%20-%20Yapay%20Zek%C3%A2%20Destekli%20%C4%B0%C3%A7erik%20Moderasyon%20Platformu%22%20projesi%20hakk%C4%B1nda%20bilgi%20verebilir%20misiniz%3F"
+  },
   "technologies": [
     {
       "name": "Django & Python",

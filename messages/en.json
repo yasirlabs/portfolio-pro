@@ -102,5 +102,7 @@
   "videoNotSupported": "Your browser does not support the video tag.",
   "client": "Client",
   "technologies": "Technologies",
-  "date": "Date"
+  "date": "Date",
+  "buy": "Buy this",
+  "buynow": "Buy Now"
 }
