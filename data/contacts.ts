@@ -15,7 +15,7 @@ export interface ContactData {
 
 export const contactData: ContactData = {
   email: "yasir7alrawi23@gmail.com",
-  phone: "+90 531 264 90 16",
+  phone: "+90 555 555 55 55",
   location: "Kırıkkale, Turkey",
   cvPath: "/assets/docs/cv.pdf",
   projectsPath: "/projects",
